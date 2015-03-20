@@ -4,7 +4,7 @@
   Plugin Name: Cookie Chooser Plugin
   Plugin URI: https://github.com/theantichris/wordpress-plugin-boilerplate
   Description: Sets a cookie based on the line the person selects in the dropdown. Uses short tags to create dropdowns.
-  Version: 0.0.1
+  Version: 0.1.0
   Author: Terry Pearson
   Author URI: http://www.avshost.com
   License: GPL V3
@@ -136,24 +136,26 @@ class CookieChooser {
 
 	$SELECTOR(document).ready(function(){
 		function cookieChooser$name(i){
-		//checks if the cookie has been set
-		if($SELECTOR.cookie('$name') != null) {
-		    // set the option to selected that corresponds to what the cookie is set to
-		    $SELECTOR('#$name option[value="' + $SELECTOR.cookie('$name') + '"]').attr('selected', 'selected');
-		}
-		// when a new option is selected this is triggered
-		$('.select_class').change(function() {
-		    // new cookie is set when the option is changed
-		    $SELECTOR.cookie('$name', $('#$name option:selected').val(), { expires: 90, path: '/'});
-		});
+			//checks if the cookie has been set
+			if($SELECTOR.cookie('$name') != null) {
+			    // set the option to selected that corresponds to what the cookie is set to
+			    $SELECTOR('#$name option[value="' + $SELECTOR.cookie('$name') + '"]').attr('selected', 'selected');
+			}
 	
 		}
+
+		// when a new option is selected this is triggered
+                $SELECTOR('#$name').change(function() {
+                    // new cookie is set when the option is changed
+                    $SELECTOR.cookie('$name', $('#$name option:selected').val(), { expires: 90, path: '/'});
+                });
+
 	});
 
 	}(jQuery));
 
 	</script>
-	<select name="$name" id="$name" onchange="cookieChooser$name($name)">
+	<select name="$name" id="$name">
 		$optionSelectString
 	<select>
 OUTPUT;
