@@ -130,6 +130,11 @@ class CookieChooser {
 
 	$SELECTOR="$";
 	$outputVar = <<<OUTPUT
+
+	<select name="$name" id="$name">
+                $optionSelectString
+        <select>
+
 	<script>
 	
 	(function ($) {
@@ -147,17 +152,17 @@ class CookieChooser {
 		// when a new option is selected this is triggered
                 $SELECTOR('#$name').change(function() {
                     // new cookie is set when the option is changed
-                    $SELECTOR.cookie('$name', $('#$name option:selected').val(), { expires: 90, path: '/'});
-                });
+                
+		    $SELECTOR.cookie('$name', $('#$name option:selected').val(), { expires: 90, path: '/'});
+
+		});
 
 	});
 
 	}(jQuery));
 
 	</script>
-	<select name="$name" id="$name">
-		$optionSelectString
-	<select>
+
 OUTPUT;
 	return $outputVar;
 
