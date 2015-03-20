@@ -3,8 +3,8 @@
 /*
   Plugin Name: Cookie Chooser Plugin
   Plugin URI: https://github.com/theantichris/wordpress-plugin-boilerplate
-  Description: Sets a cookie based on the line the person selects in the dropdown. Uses short tags to create dropdowns.
-  Version: 0.1.0
+  Description: Sets a cookie based on the line the person selects in the dropdown. Uses short tags to create dropdowns. Example shortcode: [chooser name="storeCookie" options="Lakeville store:lakeville|Burnsville store:burnsville"]
+  Version: 0.2.0
   Author: Terry Pearson
   Author URI: http://www.avshost.com
   License: GPL V3
@@ -124,7 +124,7 @@ class CookieChooser {
 
 	foreach($optionsArray as $opt){
 		$row=explode(":",$opt);
-		$optionSelectString=$optionSelectString."<option name='$row[1]'>$row[0]</option>";		
+		$optionSelectString=$optionSelectString."<option value='$row[1]'>$row[0]</option>";		
 	}
 
 
