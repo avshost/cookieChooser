@@ -156,6 +156,9 @@ class CookieChooser {
 		    $SELECTOR.cookie('$name', $('#$name option:selected').val(), { expires: 90, path: '/'});
 
 		});
+		
+		//Just a simple default value
+		$("#$name").val($SELECTOR.cookie('$name'));
 
 	});
 
