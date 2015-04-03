@@ -138,18 +138,6 @@ class CookieChooser {
 	<script>
 	(function ($) {
 	$SELECTOR(document).ready(function(){
-		function cookieChooser$name(i){
-			//checks if the cookie has been set
-			if($SELECTOR.cookie('$name-text') != null) {
-			    // set the option to selected that corresponds to what the cookie is set to
-			    $SELECTOR("#$name option").each(function() {
-				  if($(this).text() == $SELECTOR.cookie('$name-text')) {
-				    $(this).attr('selected', 'selected');            
-				  }                        
-				});			
-}
-	
-		}
 
 		// when a new option is selected this is triggered
                 $SELECTOR('#$name').change(function() {
@@ -161,8 +149,7 @@ class CookieChooser {
 		});
 		
 		//Just a simple default value
-		$("#$name").val($SELECTOR.cookie('$name-text'));
-
+		$SELECTOR('#$name option').filter(function () { return $(this).html() == $SELECTOR.cookie('$name-text'); }).prop('selected',true);
 	});
 
 	}(jQuery));
