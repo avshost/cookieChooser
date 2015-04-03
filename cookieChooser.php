@@ -2,7 +2,7 @@
 
 /*
   Plugin Name: Cookie Chooser Plugin
-  Plugin URI: https://github.com/theantichris/wordpress-plugin-boilerplate
+  Plugin URI: https://github.com/avshost/cookieChooser
   Description: Sets a cookie based on the line the person selects in the dropdown. Uses short tags to create dropdowns.
   Version: 0.1.3
   Author: Terry Pearson
