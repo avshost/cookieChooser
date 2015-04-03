@@ -4,7 +4,7 @@
   Plugin Name: Cookie Chooser Plugin
   Plugin URI: https://github.com/avshost/cookieChooser
   Description: Sets a cookie based on the line the person selects in the dropdown. Uses short tags to create dropdowns.
-  Version: 0.1.3
+  Version: 1.0.0
   Author: Terry Pearson
   Author URI: http://www.avshost.com
   License: GPL V3

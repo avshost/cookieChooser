@@ -1,3 +1,6 @@
+## Version 1.0.0
+* First official release. Documentation updated to help new users.
+
 ## Version 0.1.3
 
 * Dropdowns are now populated by the text of the dropdown stored in a cookie instead of the value.
